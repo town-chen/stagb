@@ -1212,15 +1212,38 @@
     <!--semantic-->
     <script src="semantic/dist/semantic.min.js"></script>
     <!--semantic-->
+    <script src="js/main.js"></script>
+    
     <script src="plugins/cookie/js.cookie.js"></script>
     <script src="plugins/echarts/echarts.min.js"></script>
     <script src="plugins/nicescrool/jquery.nicescroll.min.js"></script>
     <script data-pace-options='{ "ajax": false }' src="plugins/pacejs/pace.js"></script>
     <script src="js/customjs/custom-chart3.js"></script>
-    <script src="js/main.js"></script>
+
     <script>
       //Tab page tab trigger functions
-      $(".menu .item").tab();
+      $(function(){$('.mainWrap .menu .item').tab({'onFirstLoad':function(tabPath){
+        switch (tabPath) {
+            case 'second':
+                // 基于准备好的dom，初始化echarts实例
+                var myChart_axes = echarts.init(document.getElementById('main-axes'));
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart_axes.setOption(option_axes);
+                break;
+
+            case 'third':
+                // 基于准备好的dom，初始化echarts实例
+                var myChart_third = echarts.init(document.getElementById('main-third'));
+
+                // 使用刚指定的配置项和数据显示图表。
+                myChart_third.setOption(option_stack);
+
+            default:
+          }
+        }
+      });
+    })
     </script>
 
 </body>

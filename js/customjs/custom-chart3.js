@@ -268,24 +268,24 @@ myChart_axes.setOption(option);
 
 
 
-$(".menu .item").tab.settings.onFirstLoad = function (tabPath) {
-    switch (tabPath) {
-        case 'second':
-            // 基于准备好的dom，初始化echarts实例
-            var myChart_axes = echarts.init(document.getElementById('main-axes'));
-
-            // 使用刚指定的配置项和数据显示图表。
-            myChart_axes.setOption(option_axes);
-            break;
-
-        case 'third':
-            // 基于准备好的dom，初始化echarts实例
-            var myChart_third = echarts.init(document.getElementById('main-third'));
-
-            // 使用刚指定的配置项和数据显示图表。
-            myChart_third.setOption(option_stack);
-
-        default:
-
-    }
-};
+// $(".menu .item").tab.settings.onFirstLoad = function (tabPath) {
+//     switch (tabPath) {
+//         case 'second':
+//             // 基于准备好的dom，初始化echarts实例
+//             var myChart_axes = echarts.init(document.getElementById('main-axes'));
+//
+//             // 使用刚指定的配置项和数据显示图表。
+//             myChart_axes.setOption(option_axes);
+//             break;
+//
+//         case 'third':
+//             // 基于准备好的dom，初始化echarts实例
+//             var myChart_third = echarts.init(document.getElementById('main-third'));
+//
+//             // 使用刚指定的配置项和数据显示图表。
+//             myChart_third.setOption(option_stack);
+//
+//         default:
+//
+//     }
+// };
