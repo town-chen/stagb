@@ -1,0 +1,513 @@
+
+/* -----------------------------------------------------
+Color Box
+-------------------------------------------------------- */
+.color-box {
+  position: fixed;
+  top: 22%;
+  right: 0px;
+  width: 100px;
+  padding: 20px 18px 14px 20px;
+  background-color: #fff;
+  border-radius: 2px 0 0 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.175);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  -webkit-transform: translate3d(102px, 0, 0);
+          transform: translate3d(102px, 0, 0);
+  z-index: 2;
+}
+.color-box.open {
+  -webkit-transform: translate3d(0, 0, 0) !important;
+          transform: translate3d(0, 0, 0) !important;
+}
+.color-box .show-box {
+  position: absolute;
+  left: -38px;
+  top: 15px;
+  width: 38px;
+  height: 38px;
+  display: block;
+  background-color: #fff;
+  border-radius: 2px 0 0 2px;
+  box-shadow: -4px 2px 2px -2px rgba(0, 0, 0, 0.175);
+  cursor: pointer;
+  z-index: 1;
+}
+.color-box .show-box i {
+  color: rgba(0, 0, 0, 0.575);
+  font-size: 20px;
+  line-height: 38px;
+  margin-left: 8px;
+}
+.color-box p {
+  margin: 0 0 8px 0;
+  padding: 0;
+  font-size: 11px;
+}
+.color-box .colors-list {
+  margin: 0;
+  padding: 0;
+}
+.color-box .colors-list li {
+  float: left;
+  display: block;
+  margin-bottom: 2px;
+  margin-right: 6px;
+}
+.color-box .colors-list li a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.color-box .colors-list li a.teal {
+  background-color: #009688;
+}
+.color-box .colors-list li a.lightBlue {
+  background-color: #03a9f4;
+}
+.color-box .colors-list li a.green {
+  background-color: #4caf50;
+}
+.color-box .colors-list li a.amber {
+  background-color: #ffc107;
+}
+.color-box .colors-list li a.orange {
+  background-color: #ff9800;
+}
+.color-box .colors-list li a.cyan {
+  background-color: #00bcd4;
+}
+.color-box .colors-list li a.pink {
+  background-color: #e91e63;
+}
+.color-box .colors-list li a.deepPurple {
+  background-color: #673ab7;
+}
+.color-box .colors-list li a.indigo {
+  background-color: #3f51b5;
+}
+.color-box .colors-list li a.red {
+  background-color: #f44336;
+}
+.color-box .colors-list li a.yellow {
+  background-color: #ffeb3b;
+}
+.color-box .colors-list li a.lime {
+  background-color: #cddc39;
+}
+.color-box .colors-list li a.brown {
+  background-color: #795548;
+}
+
+
+
+/* -----------------------------------------------------
+    Main
+-------------------------------------------------------- */
+main {
+  width: 100%;
+ 
+  margin: 0 auto;
+}
+main section {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #eee;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.157);
+}
+main section:last-child {
+  margin-bottom: 0;
+}
+main section .heading {
+  margin: 0;
+  padding: 0 0 8px 0;
+  font-size: 1.2rem;
+}
+main section .wrap {
+  display: block;
+  margin-bottom: 3em;
+}
+main section .wrap:last-child {
+  margin-bottom: 0;
+}
+main section .wrap .title {
+  display: block;
+  padding: 8px 0;
+  font-size: 1.3em;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+main section .wrap .holder {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: .5rem 0;
+  padding: 1.5% 0 2%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+main section .wrap .holder:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+}
+main section .wrap .holder .demo {
+  display: block;
+  width: 68%;
+  min-height: 60px;
+  margin: 0 auto;
+  padding: 28px 0;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+}
+main section .wrap .holder .captions {
+  display: block;
+  width: 25%;
+  min-height: 60px;
+  margin-right: 1%;
+  line-height: 60px;
+  font-size: 14px;
+  text-align: center;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+@media only screen and (max-width: 640px) {
+  main section .wrap .holder {
+    display: block;
+    width: 100%;
+  }
+  main section .wrap .holder .demo {
+    width: 100%;
+  }
+  main section .wrap .holder .captions {
+    display: block;
+    width: 100%;
+    min-height: auto;
+    margin-right: 0;
+    line-height: normal;
+  }
+}
+main section.bg-dark {
+  background-color: #333;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.257);
+  color:#fff;
+}
+main section.bg-dark .title {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+main section.bg-dark .heading {
+  color: #fff;
+}
+main section.bg-dark .holder {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+main section.bg-light {
+  background-color: #fff;
+}
+@media only screen and (max-width: 960px) {
+  main {
+    padding: 0 1.5%;
+  }
+}
+
+/* ----------------------------------------------------------------------
+  Material Design Range Slider - by Ravikumar Chauhan
+------------------------------------------------------------------------- */
+.rkmd-slider {
+  display: block;
+  position: relative;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+.rkmd-slider input[type="range"] {
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.rkmd-slider input[type="range"] + .slider {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background-color: #bebebe;
+}
+.rkmd-slider input[type="range"] + .slider .slider-fill {
+  display: block;
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 1;
+}
+.rkmd-slider input[type="range"] + .slider .slider-handle {
+  cursor: pointer;
+  position: absolute;
+  top: -5.5px;
+  left: 0%;
+  width: 15px;
+  height: 15px;
+  margin-left: -8px;
+  border-radius: 50%;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 2;
+}
+.rkmd-slider input[type="range"]:disabled + .slider {
+  background-color: #b0b0b0 !important;
+}
+.rkmd-slider input[type="range"]:disabled + .slider .slider-fill,
+.rkmd-slider input[type="range"]:disabled + .slider .slider-handle {
+  cursor: default !important;
+  background-color: #b0b0b0 !important;
+}
+.rkmd-slider input[type="range"]:disabled + .slider .slider-fill .slider-label,
+.rkmd-slider input[type="range"]:disabled + .slider .slider-handle .slider-label {
+  display: none;
+  background-color: #b0b0b0 !important;
+}
+.rkmd-slider input[type="range"]:disabled + .slider .slider-fill.is-active,
+.rkmd-slider input[type="range"]:disabled + .slider .slider-handle.is-active {
+  top: -5.5px;
+  width: 15px;
+  height: 15px;
+  margin-left: -8px;
+}
+.rkmd-slider input[type="range"]:disabled + .slider .slider-fill.is-active .slider-label,
+.rkmd-slider input[type="range"]:disabled + .slider .slider-handle.is-active .slider-label {
+  display: none;
+  border-radius: 50%;
+  -webkit-transform: none;
+          transform: none;
+}
+.rkmd-slider input[type="range"]:disabled + .slider .slider-handle:active {
+  box-shadow: none !important;
+  -webkit-transform: scale(1) !important;
+          transform: scale(1) !important;
+}
+.rkmd-slider.slider-light input[type="range"] + .slider {
+  background-color: #5c5c5c;
+}
+.rkmd-slider.slider-light input[type="range"]:disabled + .slider {
+  background-color: #5c5c5c !important;
+}
+.rkmd-slider.slider-light input[type="range"]:disabled + .slider .slider-fill,
+.rkmd-slider.slider-light input[type="range"]:disabled + .slider .slider-handle {
+  background-color: #5c5c5c !important;
+}
+
+/* ----------------------------------------------------------------------
+  Continuous Range Slider - by Ravikumar Chauhan
+------------------------------------------------------------------------- */
+.rkmd-slider.slider-continuous.slider-scale .slider-handle:active {
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-lightBlue .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(3, 169, 244, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-teal .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(0, 150, 136, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-orange .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(255, 152, 0, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-amber .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(255, 193, 7, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-green .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(76, 175, 80, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-cyan .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(0, 188, 212, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-indigo .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(63, 81, 181, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-deepPurple .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(103, 58, 183, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-pink .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(233, 30, 99, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-red .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(244, 67, 54, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-yellow .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(255, 235, 59, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-lime .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(205, 220, 57, 0.26);
+}
+.rkmd-slider.slider-continuous.slider-shadow.slider-brown .slider-handle:active {
+  box-shadow: 0 0 0 10px rgba(121, 85, 72, 0.26);
+}
+
+/* ----------------------------------------------------------------------
+  Discrete Range Slider - by Ravikumar Chauhan
+------------------------------------------------------------------------- */
+.rkmd-slider.slider-discrete .slider .slider-handle {
+  position: relative;
+  z-index: 1;
+}
+.rkmd-slider.slider-discrete .slider .slider-handle .slider-label {
+  position: absolute;
+  top: -17.5px;
+  left: -2px;
+  width: 30px;
+  height: 30px;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  border-radius: 50%;
+  -webkit-transform: scale(0.5) rotate(-45deg);
+          transform: scale(0.5) rotate(-45deg);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.rkmd-slider.slider-discrete .slider .slider-handle .slider-label span {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  width: 100%;
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.rkmd-slider.slider-discrete .slider .slider-handle.is-active {
+  top: 0px;
+  margin-left: -2px;
+  width: 4px;
+  height: 4px;
+}
+.rkmd-slider.slider-discrete .slider .slider-handle.is-active .slider-label {
+  top: -15px;
+  left: -2px;
+  border-radius: 15px 15px 15px 0;
+  -webkit-transform: rotate(-45deg) translate(23px, -25px);
+          transform: rotate(-45deg) translate(23px, -25px);
+}
+.rkmd-slider.slider-discrete .slider .slider-handle.is-active .slider-label span {
+  opacity: 1;
+}
+.rkmd-slider.slider-discrete.slider-lightBlue .slider-label {
+  background-color: #03a9f4;
+}
+.rkmd-slider.slider-discrete.slider-teal .slider-label {
+  background-color: #009688;
+}
+.rkmd-slider.slider-discrete.slider-orange .slider-label {
+  background-color: #ff9800;
+}
+.rkmd-slider.slider-discrete.slider-amber .slider-label {
+  background-color: #ffc107;
+}
+.rkmd-slider.slider-discrete.slider-green .slider-label {
+  background-color: #4caf50;
+}
+.rkmd-slider.slider-discrete.slider-cyan .slider-label {
+  background-color: #00bcd4;
+}
+.rkmd-slider.slider-discrete.slider-indigo .slider-label {
+  background-color: #3f51b5;
+}
+.rkmd-slider.slider-discrete.slider-deepPurple .slider-label {
+  background-color: #673ab7;
+}
+.rkmd-slider.slider-discrete.slider-pink .slider-label {
+  background-color: #e91e63;
+}
+.rkmd-slider.slider-discrete.slider-red .slider-label {
+  background-color: #f44336;
+}
+.rkmd-slider.slider-discrete.slider-yellow .slider-label {
+  background-color: #ffeb3b;
+}
+.rkmd-slider.slider-discrete.slider-lime .slider-label {
+  background-color: #cddc39;
+}
+.rkmd-slider.slider-discrete.slider-brown .slider-label {
+  background-color: #795548;
+}
+
+/* ----------------------------------------------------------------------
+  Range Slider Color - by Ravikumar Chauhan
+------------------------------------------------------------------------- */
+.rkmd-slider.slider-lightBlue .slider-fill,
+.rkmd-slider.slider-lightBlue .slider-handle {
+  background-color: #03a9f4;
+}
+.rkmd-slider.slider-teal .slider-fill,
+.rkmd-slider.slider-teal .slider-handle {
+  background-color: #009688;
+}
+.rkmd-slider.slider-orange .slider-fill,
+.rkmd-slider.slider-orange .slider-handle {
+  background-color: #ff9800;
+}
+.rkmd-slider.slider-amber .slider-fill,
+.rkmd-slider.slider-amber .slider-handle {
+  background-color: #ffc107;
+}
+.rkmd-slider.slider-green .slider-fill,
+.rkmd-slider.slider-green .slider-handle {
+  background-color: #4caf50;
+}
+.rkmd-slider.slider-cyan .slider-fill,
+.rkmd-slider.slider-cyan .slider-handle {
+  background-color: #00bcd4;
+}
+.rkmd-slider.slider-indigo .slider-fill,
+.rkmd-slider.slider-indigo .slider-handle {
+  background-color: #3f51b5;
+}
+.rkmd-slider.slider-deepPurple .slider-fill,
+.rkmd-slider.slider-deepPurple .slider-handle {
+  background-color: #673ab7;
+}
+.rkmd-slider.slider-pink .slider-fill,
+.rkmd-slider.slider-pink .slider-handle {
+  background-color: #e91e63;
+}
+.rkmd-slider.slider-red .slider-fill,
+.rkmd-slider.slider-red .slider-handle {
+  background-color: #f44336;
+}
+.rkmd-slider.slider-yellow .slider-fill,
+.rkmd-slider.slider-yellow .slider-handle {
+  background-color: #ffeb3b;
+}
+.rkmd-slider.slider-lime .slider-fill,
+.rkmd-slider.slider-lime .slider-handle {
+  background-color: #cddc39;
+}
+.rkmd-slider.slider-brown .slider-fill,
+.rkmd-slider.slider-brown .slider-handle {
+  background-color: #795548;
+}

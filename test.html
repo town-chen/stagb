@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Stagb Admin Template</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="semantic/dist/semantic.min.css" rel="stylesheet" />
+    <link href="plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="plugins/pacejs/pace.css" rel="stylesheet" />
+
+    <link href="plugins/chartist/chartist.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="contextWrap">
+
+        <div class="mainWrap navslide">
+            <div class="ui equal width left aligned padded grid stackable">
+                <!--Site Content-->
+                <!--Site Content-->
+                  <div class="row">
+                      <div class="sixteen wide tablet sixteen wide computer column">
+                        <div class="ui top attached tabular menu">
+                          <a class="item active" data-tab="first">First</a>
+                          <a class="item" data-tab="second">Second</a>
+                          <a class="item" data-tab="third">Third</a>
+                        </div>
+                        <div class="ui bottom attached tab segment active" data-tab="first">
+                          <div id="main-axes" class="ct-chart2 ct-golden-section"></div>
+                        </div>
+                        <div class="ui bottom attached tab segment" data-tab="second">
+                          <div id="main-line" class="ct-chart1 ct-golden-section"></div>
+                        </div>
+                        <div class="ui bottom attached tab segment" data-tab="third">
+                          Third
+                        </div>
+                      </div>
+                  </div>
+
+                  <!-- <div class="row">
+                      <div class="sixteen wide tablet eight wide computer column">
+                          <div class="ui segments">
+                              <div class="ui segment">
+                                  <h5 class="ui header">折线图堆叠</h5>
+                              </div>
+                              <div class="ui segment">
+                                  <div id="main-line" class="ct-chart1 ct-golden-section"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="sixteen wide tablet eight wide computer column">
+                          <div class="ui segments">
+                              <div class="ui segment">
+                                  <h5 class="ui header">Multiple X Axes</h5>
+                              </div>
+                              <div class="ui segment">
+                                  <div id="main-axes" class="ct-chart2 ct-golden-section"></div>
+                              </div>
+                          </div>
+                      </div>
+                  </div> -->
+              </div>
+        </div>
+        <!--maincontent-->
+    </div>
+    </div>
+    <!--jquery-->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!--jquery-->
+    <!--semantic-->
+    <script src="semantic/dist/semantic.min.js"></script>
+    <!--semantic-->
+    <script>
+      //Tab page tab trigger functions
+
+      $('.menu .item')
+        .tab()
+      ;
+    </script>
+    <script src="plugins/cookie/js.cookie.js"></script>
+    <script src="plugins/echarts/echarts.min.js"></script>
+    <script src="plugins/nicescrool/jquery.nicescroll.min.js"></script>
+    <script data-pace-options='{ "ajax": false }' src="plugins/pacejs/pace.js"></script>
+    <script src="js/customjs/custom-chart3.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

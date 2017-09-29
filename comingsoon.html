@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="image_src" type="image/jpeg" href="../img/logo.png.html" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio" />
+    <title>Coming Soon | Stagb Admin</title>
+    <meta name="description" content="Stagb Admin Template" />
+    <meta name="keywords" content="html5, ,semantic,ui, library, framework, javascript,jquery,admin,template" />
+    <link href="semantic/dist/semantic.min.css" rel="stylesheet" />
+    <link href="css/main.css" rel="stylesheet" />
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <link href="plugins/timecircle/TimeCircles.css" rel="stylesheet" />
+</head>
+<body class="comingsoon">
+
+    <div class="ui container" style="padding-top:10%">
+        <div class="ui grid center aligned">
+            <div class="row">
+                <div class="sixteen wide tablet six wide computer column">
+                    <h1 class="ui header center aligned inverted">COMING SOON STAGB ADMIN</h1>
+                    <div id="DateCountdown" data-date="2016-5-17 00:00:00" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="plugins/timecircle/TimeCircles.js"></script>
+    <script>
+        $("#DateCountdown").TimeCircles({
+            "animation": "smooth",
+            "bg_width": 0.2,
+            "fg_width": 0.02666666666666667,
+            "circle_bg_color": "#000",
+            "time": {
+                "Days": {
+                    "text": "Days",
+                    "color": "#FFE066",
+                    "show": true
+                },
+                "Hours": {
+                    "text": "Hours",
+                    "color": "#F25F5C",
+                    "show": true
+                },
+                "Minutes": {
+                    "text": "Minutes",
+                    "color": "#247BA0",
+                    "show": true
+                },
+                "Seconds": {
+                    "text": "Seconds",
+                    "color": "#32936F",
+                    "show": true
+                }
+            }
+        });
+    </script>
+    <script>
+        var colors = ["#F25F5C", "#247BA0", "#8e44ad", "#ED6A5A", "#32936F", "#2c3e50", "#E83F6F", "#32936F", "#2E294E"];
+        var rand = Math.floor(Math.random() * colors.length);
+        $('body').css("background-color", colors[rand]);
+    </script>
+</body>
+</html>
